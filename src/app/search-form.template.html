@@ -32,7 +32,7 @@
         <input type="date" formControlName="dateOfDepature">
         
         <div *ngIf="!searchForm.controls['dateOfDepature'].valid && searchForm.controls['dateOfDepature'].touched">
-        Type in a valid time!
+        Type in a valid date!
         </div>
         
     </div>
@@ -47,7 +47,7 @@
         <label>Time</label>
         <input type="time" formControlName="time" value="">
         <div *ngIf="!searchForm.controls['time'].valid && searchForm.controls['time'].touched">
-        Type minimun something
+        Type in a valid time!
         </div>
         <!--<input type="number" name="" value="">-->
     </div>

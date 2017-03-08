@@ -20,11 +20,12 @@ export class SearchFormComponent implements OnInit {
       'destination': ['', [
         Validators.required,
         Validators.minLength(3),
-        Validators.pattern('[A-Za-z]{3,}')
+        SearchFormValidators.getDestinationErrorWithNumbers()
         ]],
       'departure': ['', [
         Validators.required,
-        Validators.minLength(3)
+        Validators.minLength(3),
+        SearchFormValidators.getDepartureErrorWithNumbers()
         ]],
       'dateOfDepature': ['', Validators.required],
       'dateOfReturn': '',

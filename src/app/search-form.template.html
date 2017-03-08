@@ -2,7 +2,7 @@
     <h1>Welcome to AwesomeFly!</h1>
 <form [formGroup]="searchForm" (ngSubmit)="onSubmit(searchForm)" >
     <div>
-        <label> destination:</label>
+        <label> Destination:</label>
         <input type="text" formControlName="destination" 
         required placeholder="Destination">
     </div>
@@ -15,7 +15,7 @@
         Type minimun 3 characters
     </div>
     <div>
-        <label> departure</label>
+        <label> Departure</label>
         <input type="text" formControlName="departure" 
         required placeholder="Departure">
     </div>
@@ -32,7 +32,7 @@
         <input type="date" formControlName="dateOfDepature">
         
         <div *ngIf="!searchForm.controls['dateOfDepature'].valid && searchForm.controls['dateOfDepature'].touched">
-        Type minimun something
+        Type in a valid time!
         </div>
         
     </div>

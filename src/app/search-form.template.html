@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <form [formGroup]="searchForm" (ngSubmit)="onSubmit(searchForm)" >
     <div>
         <label> destination:</label>
@@ -57,3 +58,41 @@
 
     <input type="submit" value="Search">
 </form>
+=======
+<body>
+    <div class="container">
+        <h1>Welcome to AwesomeFly!</h1>
+        <form>
+            <p>
+                <label>Enter Destination:</label>
+                <input type="text" name="destination" required placeholder="Destination">
+            </p>
+
+            <p>
+                <label>Enter Departure:</label>
+                <input type="text" name="departure" required placeholder="Departure">
+            </p>
+
+            <p>
+                <label>Select Date of Departure:</label>
+                <input type="date" name="date">
+            </p>
+
+            <p>
+                <label>Time:</label>
+                <input type="time" name="" value="">
+            </p>
+
+            <p>
+                <input type="radio" name="test1" value="One Way">
+                One Way
+                <!--<br/>-->
+                <input type="radio" name="test1" value="Return">
+                Return
+            </p>
+
+            <input type="button" name="submit" value="Search Flight!">
+        </form>
+    </div>
+</body>
+>>>>>>> a83fe0259e2751a41dc16d29193384f442c2f375

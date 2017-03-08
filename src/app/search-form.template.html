@@ -2,22 +2,27 @@
     <h1>Welcome to AwesomeFly!</h1>
 <form [formGroup]="searchForm" (ngSubmit)="onSubmit(searchForm)" >
     <div>
-        <label> destination:</label>
+        <label> Destination:</label>
         <input type="text" formControlName="destination" 
         required placeholder="Destination">
     </div>
+    <div *ngIf="searchForm.controls.destination.hasError('destinationErrorWithNumbers')">
+        Type no numbers
+    </div>
     <div *ngIf="!searchForm.controls['destination'].valid && 
-    searchForm.controls['destination'].touched &&
-     !searchForm.controls['destination'].dirty">
+    searchForm.controls['destination'].touched">
         Type something
     </div>
     <div *ngIf="searchForm.controls.destination.hasError('minlength')">
         Type minimun 3 characters
     </div>
     <div>
-        <label> departure</label>
+        <label> Departure</label>
         <input type="text" formControlName="departure" 
         required placeholder="Departure">
+    </div>
+    <div *ngIf="searchForm.controls.departure.hasError('departureErrorWithNumbers')">
+        Type no numbers
     </div>
     <div *ngIf="!searchForm.controls['departure'].valid && 
     searchForm.controls['departure'].touched &&
@@ -32,7 +37,7 @@
         <input type="date" formControlName="dateOfDepature">
         
         <div *ngIf="!searchForm.controls['dateOfDepature'].valid && searchForm.controls['dateOfDepature'].touched">
-        Type minimun something
+        Type in a valid date!
         </div>
         
     </div>
@@ -47,14 +52,14 @@
         <label>Time</label>
         <input type="time" formControlName="time" value="">
         <div *ngIf="!searchForm.controls['time'].valid && searchForm.controls['time'].touched">
-        Type minimun something
+        Type in a valid time!
         </div>
         <!--<input type="number" name="" value="">-->
     </div>
     <div>
         <input type="radio" formControlName="oneWayOrReturn" 
         value="One Way" required> One Way
-        <br/>
+        <!-- <br/> -->
         <input type="radio" formControlName="oneWayOrReturn" 
         value="Return" required> Return
     </div>

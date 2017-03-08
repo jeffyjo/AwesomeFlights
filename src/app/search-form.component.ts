@@ -19,7 +19,8 @@ export class SearchFormComponent implements OnInit {
     this.searchForm = fb.group ( { 
       'destination': ['', [
         Validators.required,
-        Validators.minLength(3)
+        Validators.minLength(3),
+        Validators.pattern('[A-Za-z]{3,}')
         ]],
       'departure': ['', [
         Validators.required,
@@ -34,7 +35,6 @@ export class SearchFormComponent implements OnInit {
 
   public onSubmit(searchForm) : void {
     console.log(searchForm);
-    //console.log(SearchFormValidators.getDestinationError());
   }
 
     ngOnInit(){}

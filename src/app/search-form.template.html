@@ -1,11 +1,14 @@
-<<<<<<< HEAD
+<div class="container">
+    <h1>Welcome to AwesomeFly!</h1>
 <form [formGroup]="searchForm" (ngSubmit)="onSubmit(searchForm)" >
     <div>
         <label> destination:</label>
         <input type="text" formControlName="destination" 
         required placeholder="Destination">
     </div>
-    <div *ngIf="!searchForm.controls['destination'].valid && searchForm.controls['destination'].touched">
+    <div *ngIf="!searchForm.controls['destination'].valid && 
+    searchForm.controls['destination'].touched &&
+     !searchForm.controls['destination'].dirty">
         Type something
     </div>
     <div *ngIf="searchForm.controls.destination.hasError('minlength')">
@@ -16,7 +19,9 @@
         <input type="text" formControlName="departure" 
         required placeholder="Departure">
     </div>
-    <div *ngIf="!searchForm.controls['departure'].valid && searchForm.controls['departure'].touched">
+    <div *ngIf="!searchForm.controls['departure'].valid && 
+    searchForm.controls['departure'].touched &&
+    !searchForm.controls['departure'].dirty">
         Type something
     </div>
     <div *ngIf="searchForm.controls.departure.hasError('minlength')">
@@ -58,10 +63,12 @@
 
     <input type="submit" value="Search">
 </form>
-=======
+</div>
+
+<!--
 <body>
     <div class="container">
-        <h1>Welcome to AwesomeFly!</h1>
+        
         <form>
             <p>
                 <label>Enter Destination:</label>
@@ -87,6 +94,7 @@
                 <input type="radio" name="test1" value="One Way">
                 One Way
                 <!--<br/>-->
+                <!--
                 <input type="radio" name="test1" value="Return">
                 Return
             </p>
@@ -95,4 +103,4 @@
         </form>
     </div>
 </body>
->>>>>>> a83fe0259e2751a41dc16d29193384f442c2f375
+-->

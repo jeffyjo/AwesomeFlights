@@ -23,7 +23,11 @@ h1{
     @include fontStack($family: 'Helvetica', $size: 24px);
 }
 
-form p{
+/*form p{
+    color: $inputTextColor;
+}*/
+
+form div{
     color: $inputTextColor;
 }
 

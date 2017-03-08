@@ -19,7 +19,10 @@ h1 {
   font-size: 24px;
   font-weight: 600; }
 
-form p {
+/*form p{
+    color: $inputTextColor;
+}*/
+form div {
   color: #222; }
 
 label {

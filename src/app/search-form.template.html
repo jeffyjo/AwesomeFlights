@@ -9,7 +9,7 @@
     <div *ngIf="!searchForm.controls['destination'].valid && 
     searchForm.controls['destination'].touched &&
      !searchForm.controls['destination'].dirty">
-        Type something
+        Type in your desired destination city!
     </div>
     <div *ngIf="searchForm.controls.destination.hasError('minlength')">
         Type minimun 3 characters
@@ -22,7 +22,7 @@
     <div *ngIf="!searchForm.controls['departure'].valid && 
     searchForm.controls['departure'].touched &&
     !searchForm.controls['departure'].dirty">
-        Type something
+        Type in your desired departure city!
     </div>
     <div *ngIf="searchForm.controls.departure.hasError('minlength')">
         Type minimun 3 characters

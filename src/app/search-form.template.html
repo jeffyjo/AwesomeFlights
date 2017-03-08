@@ -1,25 +1,59 @@
-<form>
+<form [formGroup]="searchForm" (ngSubmit)="onSubmit(searchForm)" >
+    <div>
+        <label> destination:</label>
+        <input type="text" formControlName="destination" 
+        required placeholder="Destination">
+    </div>
+    <div *ngIf="!searchForm.controls['destination'].valid && searchForm.controls['destination'].touched">
+        Type something
+    </div>
+    <div *ngIf="searchForm.controls.destination.hasError('minlength')">
+        Type minimun 3 characters
+    </div>
+    <div>
+        <label> departure</label>
+        <input type="text" formControlName="departure" 
+        required placeholder="Departure">
+    </div>
+    <div *ngIf="!searchForm.controls['departure'].valid && searchForm.controls['departure'].touched">
+        Type something
+    </div>
+    <div *ngIf="searchForm.controls.departure.hasError('minlength')">
+        Type minimun 3 characters
+    </div>
+    <div>
+        <label> Date of departure</label>
+        <input type="date" formControlName="dateOfDepature">
+        
+        <div *ngIf="!searchForm.controls['dateOfDepature'].valid && searchForm.controls['dateOfDepature'].touched">
+        Type minimun something
+        </div>
+        
+    </div>
+    <!-- Return Calendar-->
+    <!-- 
     <p>
-        Enter destination:
-        <input type="text" name="destination" required placeholder="Destination">
+        <label> Date of return</label>
+        <input type="date" formControlName="dateOfReturn">
     </p>
-    <p>
-        Enter departure
-        <input type="text" name="departure" required placeholder="Departure">
-    </p>
-    <p>
-        Select Date of Departure
-        <input type="date" name="date">
-    </p>
-    <p>
-        Time
-        <input type="time" name="" value="">
+    -->
+    <div>
+        <label>Time</label>
+        <input type="time" formControlName="time" value="">
+        <div *ngIf="!searchForm.controls['time'].valid && searchForm.controls['time'].touched">
+        Type minimun something
+        </div>
         <!--<input type="number" name="" value="">-->
-    </p>
-    <p>
-        <input type="radio" name="test1" value="One Way"> One Way
+    </div>
+    <div>
+        <input type="radio" formControlName="oneWayOrReturn" 
+        value="One Way" required> One Way
         <br/>
-        <input type="radio" name="test1" value="Return"> Return
-    </p>
-    <input type="button" name="submit" value="Search">
+        <input type="radio" formControlName="oneWayOrReturn" 
+        value="Return" required> Return
+    </div>
+
+    <!-- TODO: Mangler 'number of passengers -->
+
+    <input type="submit" value="Search">
 </form>

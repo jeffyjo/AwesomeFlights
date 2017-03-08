@@ -6,9 +6,11 @@
         <input type="text" formControlName="destination" 
         required placeholder="Destination">
     </div>
+    <div *ngIf="searchForm.controls.destination.hasError('destinationErrorWithNumbers')">
+        Type no numbers
+    </div>
     <div *ngIf="!searchForm.controls['destination'].valid && 
-    searchForm.controls['destination'].touched &&
-     !searchForm.controls['destination'].dirty">
+    searchForm.controls['destination'].touched">
         Type something
     </div>
     <div *ngIf="searchForm.controls.destination.hasError('minlength')">
@@ -18,6 +20,9 @@
         <label> departure</label>
         <input type="text" formControlName="departure" 
         required placeholder="Departure">
+    </div>
+    <div *ngIf="searchForm.controls.departure.hasError('departureErrorWithNumbers')">
+        Type no numbers
     </div>
     <div *ngIf="!searchForm.controls['departure'].valid && 
     searchForm.controls['departure'].touched &&

@@ -37,7 +37,7 @@ label{
 }
 
 input:not([type=radio]):not([type=button]){
-    color: inherit;
+    color: #000;
     font: inherit;
     width: 100%;
     padding: 5px;
@@ -58,4 +58,8 @@ input[type=button]{
 
 input[type=button]:hover {
   background-color: invert(cornflowerblue) 
+}
+
+.validator{
+    color: red;
 }

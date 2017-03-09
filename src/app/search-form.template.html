@@ -38,7 +38,7 @@
         <input type="date" formControlName="dateOfDepature">
         
         <div *ngIf="!searchForm.controls['dateOfDepature'].valid && searchForm.controls['dateOfDepature'].touched">
-        Type in a valid date!
+        <label class="validator">Type in a valid date!</label>
         </div>
         
     </div>

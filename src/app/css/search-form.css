@@ -30,7 +30,7 @@ label {
   margin-bottom: 5px; }
 
 input:not([type=radio]):not([type=button]) {
-  color: inherit;
+  color: #000;
   font: inherit;
   width: 100%;
   padding: 5px;
@@ -49,5 +49,8 @@ input[type=button] {
 
 input[type=button]:hover {
   background-color: #9b6a12; }
+
+.validator {
+  color: red; }
 
 /*# sourceMappingURL=search-form.css.map */

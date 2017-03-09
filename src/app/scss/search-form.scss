@@ -60,6 +60,20 @@ input[type=button]:hover {
   background-color: invert(cornflowerblue) 
 }
 
-.validator{
-    color: red;
+
+.requiredValidator{
+    color: $alertColor;
+    background: $alertBackground;
+    border-radius: 5px;
+    border: 1px solid $alertBorder;
+    padding: 5px;
+}
+
+
+.wrongFormatValidator{
+    color: $wrongFormatColor;
+    background: $wrongFormatBackground;
+    border-radius: 5px;
+    border: 1px solid $wrongFormatBorder;
+    padding: 5px;
 }

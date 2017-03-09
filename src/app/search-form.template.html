@@ -10,14 +10,9 @@
         Type no numbers
     </div>
     <div *ngIf="!searchForm.controls['destination'].valid && 
-<<<<<<< HEAD
     searchForm.controls['destination'].touched &&
      !searchForm.controls['destination'].dirty">
         Type in your desired destination city!
-=======
-    searchForm.controls['destination'].touched">
-        Type something
->>>>>>> origin/master
     </div>
     <div *ngIf="searchForm.controls.destination.hasError('minlength')">
         Type minimun 3 characters

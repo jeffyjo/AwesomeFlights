@@ -39,7 +39,7 @@ label {
   display: block;
   margin-bottom: 5px; }
 
-input:not([type=radio]):not([type=submit]) {
+input:not([type=radio]):not([type=submit]):not([type=button]) {
   color: #000;
   font: inherit;
   width: 100%;

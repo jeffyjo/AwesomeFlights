@@ -15,12 +15,14 @@
 #navbar-login [type="button"] {
   float: left;
   width: 23%;
-  margin: 5px; }
+  margin: 5px;
+  height: 30px; }
 
 input[type=button] {
   background-color: cornflowerblue;
   color: #222;
   cursor: pointer;
+  font: inherit;
   border-radius: 5px;
   border: 0; }
   input[type=button]:hover {

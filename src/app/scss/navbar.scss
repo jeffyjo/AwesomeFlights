@@ -22,6 +22,7 @@
         float: left;
         width: 23%;
         margin: 5px;
+        height: 30px;
     }
 }
 
@@ -29,6 +30,7 @@ input[type=button] {
     background-color: $buttonColor;
     color: $inputTextColor;
     cursor: pointer;
+    font: inherit;
     border-radius: 5px;
     border: 0;
     &:hover {

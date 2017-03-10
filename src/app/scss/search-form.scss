@@ -61,7 +61,7 @@ input:not([type=radio]):not([type=submit]){
 input[type=submit]{
     width: 100%;
     padding: 8px;
-    background-color: cornflowerblue;
+    background-color: $buttonColor;
     // background-color: antiquewhite;
     color: $inputTextColor;
     cursor: pointer;
@@ -69,8 +69,8 @@ input[type=submit]{
     border: 0;
 }
 
-input[type=button]:hover {
-  background-color: invert(cornflowerblue) 
+input[type=submit]:hover {
+  background-color: invert($buttonColor); 
 }
 
 .requiredValidator{

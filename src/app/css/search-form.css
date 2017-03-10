@@ -1,0 +1,78 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i);
+* {
+  box-sizing: border-box; }
+
+body {
+  font-family: "Open Sans";
+  font-size: 14px;
+  font-weight: 600;
+  background: url("http://www.slate.com/content/dam/slate/blogs/bad_astronomy/2015/10/151027_BA_blue-sky.jpg.CROP.promo-xlarge2.jpg") no-repeat;
+  background-size: cover;
+  color: whitesmoke; }
+
+.container {
+  width: 400px;
+  margin: 0 auto;
+  margin-top: 50px;
+  background-color: rgba(0, 0, 0, 0.3);
+  padding: 20px;
+  border-radius: 5px; }
+
+.radioButtons {
+  padding: 7px; }
+
+.inputLabels {
+  padding: 5px; }
+
+h1 {
+  font-family: "Helvetica";
+  font-size: 24px;
+  font-weight: 600; }
+
+/*form p{
+    color: $inputTextColor;
+}*/
+form div {
+  color: #222; }
+
+label {
+  display: block;
+  margin-bottom: 5px; }
+
+input:not([type=radio]):not([type=submit]) {
+  color: #000;
+  font: inherit;
+  width: 100%;
+  padding: 5px;
+  border: 1px #ccc solid;
+  box-shadow: inset 0 1px 3px #ddd;
+  border-radius: 5px; }
+
+input[type=submit] {
+  width: 100%;
+  padding: 8px;
+  font: inherit;
+  background-color: cornflowerblue;
+  color: #222;
+  cursor: pointer;
+  border-radius: 5px;
+  border: 0; }
+
+input[type=submit]:hover {
+  background-color: #9b6a12; }
+
+.requiredValidator {
+  color: #983F3C;
+  background: #EEDADA;
+  border-radius: 5px;
+  border: 1px solid #E5C6CC;
+  padding: 5px; }
+
+.wrongFormatValidator {
+  color: #7C6534;
+  background: #FAF8DF;
+  border-radius: 5px;
+  border: 1px solid #F6EAC5;
+  padding: 5px; }
+
+/*# sourceMappingURL=search-form.css.map */

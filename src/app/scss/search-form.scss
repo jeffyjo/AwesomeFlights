@@ -8,15 +8,27 @@
 
 body{
     @include fontStack($family: 'Open Sans', $size: 14px, $weight: 600);
-    background-color: $bodyBgColor;
+    background: $bodyBgImage no-repeat;
+    background-size: cover;
     color: $lightColor;
 }
 
 .container{
-    width: 350px;
+    width: 400px;
     margin: 0 auto;
     margin-top: 50px;
-    //border: 1px white solid;
+    
+    background-color: $boxTransparent;
+    padding: 20px;
+    border-radius: 5px;
+}
+
+.radioButtons{
+    padding: 7px;
+}
+
+.inputLabels{
+    padding: 5px;
 }
 
 h1{
@@ -36,7 +48,7 @@ label{
     margin-bottom: 5px;
 }
 
-input:not([type=radio]):not([type=button]){
+input:not([type=radio]):not([type=submit]){
     color: #000;
     font: inherit;
     width: 100%;
@@ -46,20 +58,20 @@ input:not([type=radio]):not([type=button]){
     border-radius: 5px;
 }
 
-input[type=button]{
+input[type=submit]{
     width: 100%;
     padding: 8px;
-    background-color: antiquewhite;
+    font: inherit;
+    background-color: $buttonColor;
     color: $inputTextColor;
     cursor: pointer;
     border-radius: 5px;
     border: 0;
 }
 
-input[type=button]:hover {
-  background-color: invert(cornflowerblue) 
+input[type=submit]:hover {
+  background-color: invert($buttonColor); 
 }
-
 
 .requiredValidator{
     color: $alertColor;
@@ -68,7 +80,6 @@ input[type=button]:hover {
     border: 1px solid $alertBorder;
     padding: 5px;
 }
-
 
 .wrongFormatValidator{
     color: $wrongFormatColor;

@@ -1,12 +1,37 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i);
+@import 'mixins.scss';
+@import 'vars.scss';
 #navbar-container {
     margin: 0 auto;
+    width: 100%;
+    height: 75px;
 }
 
-#logoFront {}
-
-#navbar-login {}
-
-.navbar-login {
+#navbar-cont-right {
+    width: 50%;
     float: right;
-    width: 50px;
+}
+
+#navbar-cont-left {
+    width: 50%;
+}
+
+#navbar-login {
+    input[type="text"],
+    [type="button"] {
+        float: left;
+        width: 23%;
+        margin: 5px;
+    }
+}
+
+input[type=button] {
+    background-color: $buttonColor;
+    color: $inputTextColor;
+    cursor: pointer;
+    border-radius: 5px;
+    border: 0;
+    &:hover {
+        background-color: invert($buttonColor);
+    }
 }

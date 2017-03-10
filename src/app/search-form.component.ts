@@ -28,9 +28,10 @@ export class SearchFormComponent implements OnInit {
         SearchFormValidators.getDepartureErrorWithNumbers()
         ]],
       'dateOfDepature': ['', Validators.required],
-      'numberOfPassengers': ['', Validators.required],
+      'departureTime': ['', Validators.required],
       'dateOfReturn': '',
-      'time': ['', Validators.required],
+      'returnTime': '',
+      'numberOfPassengers': ['', Validators.required],
       'oneWayOrReturn': ['true', Validators.required]
     })
   }

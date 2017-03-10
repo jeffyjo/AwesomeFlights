@@ -42,6 +42,15 @@
         </div>
         
     </div>
+    
+    <!--Time-->
+    <div>
+        <label class="inputLabels"> Departure time:</label>
+        <input type="time" formControlName="departureTime">
+        <div *ngIf="!searchForm.controls['departureTime'].valid && searchForm.controls['departureTime'].touched">
+            <label class="requiredValidator">Desired time is required</label>
+        </div>
+    </div>
 
     <!-- Return Calendar-->
     <div *ngIf="searchForm.value.oneWayOrReturn == 'false'">
@@ -49,14 +58,16 @@
         <input type="date" formControlName="dateOfReturn">
     </div>
 
-    <!--Time-->
-    <div>
-        <label class="inputLabels">Time:</label>
-        <input type="time" formControlName="time" value="">
-        <div *ngIf="!searchForm.controls['time'].valid && searchForm.controls['time'].touched">
+    <div *ngIf="searchForm.value.oneWayOrReturn == 'false'">
+        <label class="inputLabels">Return time:</label>
+        <input type="time" formControlName="returnTime">
+        <!-- 
+        <div *ngIf="!searchForm.controls['returnTime'].valid && searchForm.controls['returnTime'].touched">
             <label class="requiredValidator">Desired time is required</label>
         </div>
+        -->
     </div>
+    
 
     <!--Number of passengers -->
     <div>

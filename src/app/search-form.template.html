@@ -43,26 +43,28 @@
         
     </div>
 
-    <!-- TODO: Mangler 'number of passengers -->
+    <!-- Return Calendar-->
+    <div *ngIf="searchForm.value.oneWayOrReturn == 'false'">
+        <label> Date of return </label>
+        <input type="date" formControlName="dateOfReturn">
+    </div>
+
+    <!--Time-->
+    <div>
+        <label class="inputLabels">Time:</label>
+        <input type="time" formControlName="time" value="">
+        <div *ngIf="!searchForm.controls['time'].valid && searchForm.controls['time'].touched">
+            <label class="requiredValidator">Desired time is required</label>
+        </div>
+    </div>
+
+    <!--Number of passengers -->
     <div>
         <label class="inputLabels">Number of passengers:</label>
         <input type="number" name="numberOfPassengers" placeholder="Number of passengers" min="1" formControlName="numberOfPassengers">
 
         <div *ngIf="!searchForm.controls['numberOfPassengers'].valid && searchForm.controls['numberOfPassengers'].touched">
         <label class="requiredValidator">Number of passengers is required</label>
-        </div>
-    </div>
-
-    <!-- Return Calendar-->
-    <div *ngIf="searchForm.value.oneWayOrReturn == 'false'">
-        <label> Date of return </label>
-        <input type="date" formControlName="dateOfReturn">
-    </div>
-    <div>
-        <label class="inputLabels">Time:</label>
-        <input type="time" formControlName="time" value="">
-        <div *ngIf="!searchForm.controls['time'].valid && searchForm.controls['time'].touched">
-            <label class="requiredValidator">Desired time is required</label>
         </div>
     </div>
 

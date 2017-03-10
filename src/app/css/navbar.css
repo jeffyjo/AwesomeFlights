@@ -1,8 +1,18 @@
 #navbar-container {
-  margin: 0 auto; }
+  margin: 0 auto;
+  width: 100%;
+  height: 75px; }
 
-.navbar-login {
-  float: right;
-  width: 50px; }
+#navbar-cont-right {
+  width: 50%;
+  float: right; }
+
+#navbar-cont-left {
+  width: 50%; }
+
+#navbar-login input[type="text"],
+#navbar-login [type="button"] {
+  float: left;
+  width: 25%; }
 
 /*# sourceMappingURL=navbar.css.map */

@@ -7,7 +7,7 @@ import { FormGroup, ReactiveFormsModule, FormBuilder, Validators,
 
 @Component({
   selector: 'search-form',
-  styleUrls: ['./css/search-form.css'],
+  styleUrls: ['./scss/search-form.scss'],
   templateUrl: './search-form.template.html'
 })
 

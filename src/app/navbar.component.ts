@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'navbar',
-  styleUrls: ['./css/navbar.css'],
+  styleUrls: ['./scss/navbar.scss'],
   templateUrl: './navbar.template.html'
 })
 

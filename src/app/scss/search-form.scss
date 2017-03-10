@@ -14,10 +14,13 @@ body{
 }
 
 .container{
-    width: 350px;
+    width: 400px;
     margin: 0 auto;
     margin-top: 50px;
-    //border: 1px white solid;
+    
+    background-color: $boxTransparent;
+    padding: 20px;
+    border-radius: 5px;
 }
 
 h1{

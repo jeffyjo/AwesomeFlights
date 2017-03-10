@@ -42,6 +42,17 @@
         </div>
         
     </div>
+
+    <!-- TODO: Mangler 'number of passengers -->
+    <div>
+        <label class="inputLabels">Number of passengers:</label>
+        <input type="number" name="numberOfPassengers" placeholder="Number of passengers" min="1" formControlName="numberOfPassengers">
+
+        <div *ngIf="!searchForm.controls['numberOfPassengers'].valid && searchForm.controls['numberOfPassengers'].touched">
+        <label class="requiredValidator">Number of passengers is required</label>
+        </div>
+    </div>
+
     <!-- Return Calendar-->
     <!-- 
     <p>
@@ -55,17 +66,13 @@
         <div *ngIf="!searchForm.controls['time'].valid && searchForm.controls['time'].touched">
             <label class="requiredValidator">Desired time is required</label>
         </div>
-        <!--<input type="number" name="" value="">-->
     </div>
     <div class="radioButtons">
         <input type="radio" formControlName="oneWayOrReturn" 
         value="One Way" required> One Way
-        <!-- <br/> -->
         <input type="radio" formControlName="oneWayOrReturn" 
         value="Return" required> Return
     </div>
-
-    <!-- TODO: Mangler 'number of passengers -->
 
     <input type="submit" value="Search">
 </form>

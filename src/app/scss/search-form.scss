@@ -23,6 +23,14 @@ body{
     border-radius: 5px;
 }
 
+.radioButtons{
+    padding: 7px;
+}
+
+.inputLabels{
+    padding: 5px;
+}
+
 h1{
     @include fontStack($family: 'Helvetica', $size: 24px);
 }

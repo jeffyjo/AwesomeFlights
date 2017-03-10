@@ -2,7 +2,7 @@
     <h1>Welcome to AwesomeFlight!</h1>
 <form [formGroup]="searchForm" (ngSubmit)="onSubmit(searchForm)" >
     <div>
-        <label> Destination:</label>
+        <label class="inputLabels">Destination:</label>
         <input type="text" formControlName="destination" 
         required placeholder="Destination">
     </div>
@@ -18,7 +18,7 @@
         <label class="wrongFormatValidator">Type in minimun 3 characters</label>
     </div>
     <div>
-        <label>Departure:</label>
+        <label class="inputLabels">Departure:</label>
         <input type="text" formControlName="departure" 
         required placeholder="Departure">
     </div>
@@ -34,7 +34,7 @@
         <label class="wrongFormatValidator">Type in minimun 3 characters</label>
     </div>
     <div>
-        <label>Date of departure:</label>
+        <label class="inputLabels">Date of departure:</label>
         <input type="date" formControlName="dateOfDepature">
         
         <div *ngIf="!searchForm.controls['dateOfDepature'].valid && searchForm.controls['dateOfDepature'].touched">
@@ -50,14 +50,14 @@
     </p>
     -->
     <div>
-        <label>Time:</label>
+        <label class="inputLabels">Time:</label>
         <input type="time" formControlName="time" value="">
         <div *ngIf="!searchForm.controls['time'].valid && searchForm.controls['time'].touched">
             <label class="requiredValidator">Desired time is required</label>
         </div>
         <!--<input type="number" name="" value="">-->
     </div>
-    <div>
+    <div class="radioButtons">
         <input type="radio" formControlName="oneWayOrReturn" 
         value="One Way" required> One Way
         <!-- <br/> -->

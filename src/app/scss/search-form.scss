@@ -61,8 +61,8 @@ input:not([type=radio]):not([type=submit]){
 input[type=submit]{
     width: 100%;
     padding: 8px;
+    font: inherit;
     background-color: $buttonColor;
-    // background-color: antiquewhite;
     color: $inputTextColor;
     cursor: pointer;
     border-radius: 5px;

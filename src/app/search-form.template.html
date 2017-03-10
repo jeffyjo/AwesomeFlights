@@ -43,12 +43,10 @@
         
     </div>
     <!-- Return Calendar-->
-    <!-- 
-    <p>
-        <label> Date of return</label>
+    <div *ngIf="searchForm.value.oneWayOrReturn == 'false'">
+        <label> Date of return </label>
         <input type="date" formControlName="dateOfReturn">
-    </p>
-    -->
+    </div>
     <div>
         <label>Time:</label>
         <input type="time" formControlName="time" value="">
@@ -58,11 +56,11 @@
         <!--<input type="number" name="" value="">-->
     </div>
     <div>
-        <input type="radio" formControlName="oneWayOrReturn" 
-        value="One Way" required> One Way
+        <input type="radio" checked="checked" ng-model="radio" formControlName="oneWayOrReturn" 
+        value="true" id="oneWayRadio"> One Way
         <!-- <br/> -->
-        <input type="radio" formControlName="oneWayOrReturn" 
-        value="Return" required> Return
+        <input type="radio" ng-model="radio" formControlName="oneWayOrReturn" 
+        value="false" id="returnRadio"> Return
     </div>
 
     <!-- TODO: Mangler 'number of passengers -->

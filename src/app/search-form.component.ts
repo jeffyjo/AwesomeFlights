@@ -30,12 +30,13 @@ export class SearchFormComponent implements OnInit {
       'dateOfDepature': ['', Validators.required],
       'dateOfReturn': '',
       'time': ['', Validators.required],
-      'oneWayOrReturn': ['', Validators.required]
+      'oneWayOrReturn': ['true', Validators.required]
     })
   }
 
   public onSubmit(searchForm) : void {
-    console.log(searchForm);
+    //console.log(searchForm);
+    console.log(searchForm.value.oneWayOrReturn);
   }
 
     ngOnInit(){}

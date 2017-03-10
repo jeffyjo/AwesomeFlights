@@ -6,7 +6,8 @@ body {
   font-family: "Open Sans";
   font-size: 14px;
   font-weight: 600;
-  background-color: cornflowerblue;
+  background: url("http://www.slate.com/content/dam/slate/blogs/bad_astronomy/2015/10/151027_BA_blue-sky.jpg.CROP.promo-xlarge2.jpg") no-repeat;
+  background-size: cover;
   color: whitesmoke; }
 
 .container {
@@ -29,7 +30,7 @@ label {
   display: block;
   margin-bottom: 5px; }
 
-input:not([type=radio]):not([type=button]) {
+input:not([type=radio]):not([type=submit]) {
   color: #000;
   font: inherit;
   width: 100%;
@@ -38,10 +39,10 @@ input:not([type=radio]):not([type=button]) {
   box-shadow: inset 0 1px 3px #ddd;
   border-radius: 5px; }
 
-input[type=button] {
+input[type=submit] {
   width: 100%;
   padding: 8px;
-  background-color: antiquewhite;
+  background-color: cornflowerblue;
   color: #222;
   cursor: pointer;
   border-radius: 5px;

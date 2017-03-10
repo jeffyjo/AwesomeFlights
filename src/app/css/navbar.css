@@ -13,6 +13,7 @@
 #navbar-login input[type="text"],
 #navbar-login [type="button"] {
   float: left;
-  width: 25%; }
+  width: 23%;
+  margin: 5px; }
 
 /*# sourceMappingURL=navbar.css.map */

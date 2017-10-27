@@ -4,7 +4,7 @@
         <div>
             <label class="inputLabels">Destination</label>
             <input type="text" formControlName="destination" 
-            required placeholder="Destination">
+            required placeholder="Vienna">
         </div>
         <div *ngIf="searchForm.controls.destination.hasError('destinationErrorWithNumbers')">
             <label class="wrongFormatValidator">Do not type numbers!</label>
@@ -12,15 +12,15 @@
         <div *ngIf="!searchForm.controls['destination'].valid && 
                     searchForm.controls['destination'].touched &&
                     !searchForm.controls['destination'].dirty">
-            <label class="requiredValidator">Desired destination is required</label>
+            <label class="requiredValidator">Desired destination is required!</label>
         </div>
         <div *ngIf="searchForm.controls.destination.hasError('minlength')">
-            <label class="wrongFormatValidator">Type in minimun 3 characters</label>
+            <label class="wrongFormatValidator">Type in minimun 3 characters!</label>
         </div>
         <div>
             <label class="inputLabels">Departure</label>
             <input type="text" formControlName="departure" 
-                required placeholder="Departure">
+                required placeholder="Copenhagen">
         </div>
         <div *ngIf="searchForm.controls.departure.hasError('departureErrorWithNumbers')">
             <label class="wrongFormatValidator">Do not type numbers!</label>
@@ -28,16 +28,16 @@
         <div *ngIf="!searchForm.controls['departure'].valid && 
                     searchForm.controls['departure'].touched &&
                     !searchForm.controls['departure'].dirty">
-            <label class="requiredValidator">Desired departure is required</label>
+            <label class="requiredValidator">Desired departure is required!</label>
         </div>
         <div *ngIf="searchForm.controls.departure.hasError('minlength')">
-            <label class="wrongFormatValidator">Type in minimun 3 characters</label>
+            <label class="wrongFormatValidator">Type in minimun 3 characters!</label>
         </div>
         <div>
             <label class="inputLabels">Date of departure</label>
             <input type="date" formControlName="dateOfDepature">
             <div *ngIf="!searchForm.controls['dateOfDepature'].valid && searchForm.controls['dateOfDepature'].touched">
-                <label class="requiredValidator">Desired date is required</label>
+                <label class="requiredValidator">Desired date is required!</label>
             </div>
         </div>
         
@@ -46,7 +46,7 @@
             <label class="inputLabels"> Departure time</label>
             <input type="time" formControlName="departureTime">
             <div *ngIf="!searchForm.controls['departureTime'].valid && searchForm.controls['departureTime'].touched">
-                <label class="requiredValidator">Desired time is required</label>
+                <label class="requiredValidator">Desired time is required!</label>
             </div>
         </div>
 
@@ -59,19 +59,14 @@
         <div *ngIf="searchForm.value.oneWayOrReturn == 'false'">
             <label class="inputLabels">Return time</label>
             <input type="time" formControlName="returnTime">
-            <!-- 
-            <div *ngIf="!searchForm.controls['returnTime'].valid && searchForm.controls['returnTime'].touched">
-                <label class="requiredValidator">Desired time is required</label>
-            </div>
-            -->
         </div>
         
         <!--Number of passengers -->
         <div>
             <label class="inputLabels">Number of passengers</label>
-            <input type="number" name="numberOfPassengers" placeholder="Number of passengers" min="1" formControlName="numberOfPassengers">
+            <input type="number" name="numberOfPassengers" placeholder="2" min="1" formControlName="numberOfPassengers">
             <div *ngIf="!searchForm.controls['numberOfPassengers'].valid && searchForm.controls['numberOfPassengers'].touched">
-                <label class="requiredValidator">Number of passengers is required</label>
+                <label class="requiredValidator">Number of passengers is required!</label>
             </div>
         </div>
 

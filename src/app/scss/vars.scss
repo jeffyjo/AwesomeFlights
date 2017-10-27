@@ -1,12 +1,20 @@
+//colors
 $buttonColor: cornflowerblue;
 $lightColor: whitesmoke;
-$inputTextColor: #222;
+$inputTextColor: #fff;
+$headerColor: #eaf2ff;
+
+//alert colors
 $alertColor: #983F3C;
 $alertBackground: #EEDADA;
 $alertBorder: #E5C6CC;
+//+ wrong
 $wrongFormatColor: #7C6534;
 $wrongFormatBackground: #FAF8DF;
 $wrongFormatBorder: #F6EAC5;  
 
+//background
 $bodyBgImage: url("http://www.slate.com/content/dam/slate/blogs/bad_astronomy/2015/10/151027_BA_blue-sky.jpg.CROP.promo-xlarge2.jpg"); 
-$boxTransparent: rgba(0, 0, 0, 0.3);
+
+//box
+$boxTransparent: rgba(0, 0, 0, 0.5);

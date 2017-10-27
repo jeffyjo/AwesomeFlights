@@ -1,131 +1,81 @@
 <div class="container">
     <h1>Welcome to AwesomeFlight!</h1>
-<form [formGroup]="searchForm" (ngSubmit)="onSubmit(searchForm)" >
-    <div>
-        <label class="inputLabels">Destination:</label>
-        <input type="text" formControlName="destination" 
-        required placeholder="Destination">
-    </div>
-    <div *ngIf="searchForm.controls.destination.hasError('destinationErrorWithNumbers')">
-        <label class="wrongFormatValidator">Do not type numbers!</label>
-    </div>
-    <div *ngIf="!searchForm.controls['destination'].valid && 
-    searchForm.controls['destination'].touched &&
-     !searchForm.controls['destination'].dirty">
-        <label class="requiredValidator">Desired destination is required</label>
-    </div>
-    <div *ngIf="searchForm.controls.destination.hasError('minlength')">
-        <label class="wrongFormatValidator">Type in minimun 3 characters</label>
-    </div>
-    <div>
-        <label class="inputLabels">Departure:</label>
-        <input type="text" formControlName="departure" 
-        required placeholder="Departure">
-    </div>
-    <div *ngIf="searchForm.controls.departure.hasError('departureErrorWithNumbers')">
-        <label class="wrongFormatValidator">Do not type numbers!</label>
-    </div>
-    <div *ngIf="!searchForm.controls['departure'].valid && 
-    searchForm.controls['departure'].touched &&
-    !searchForm.controls['departure'].dirty">
-        <label class="requiredValidator">Desired departure is required</label>
-    </div>
-    <div *ngIf="searchForm.controls.departure.hasError('minlength')">
-        <label class="wrongFormatValidator">Type in minimun 3 characters</label>
-    </div>
-    <div>
-        <label class="inputLabels">Date of departure:</label>
-        <input type="date" formControlName="dateOfDepature">
-        
-        <div *ngIf="!searchForm.controls['dateOfDepature'].valid && searchForm.controls['dateOfDepature'].touched">
-        <label class="requiredValidator">Desired date is required</label>
+    <form [formGroup]="searchForm" (ngSubmit)="onSubmit(searchForm)" >
+        <div>
+            <label class="inputLabels">Destination</label>
+            <input type="text" formControlName="destination" 
+            required placeholder="Vienna">
+        </div>
+        <div *ngIf="searchForm.controls.destination.hasError('destinationErrorWithNumbers')">
+            <label class="wrongFormatValidator">Do not type numbers!</label>
+        </div>
+        <div *ngIf="!searchForm.controls['destination'].valid && 
+                    searchForm.controls['destination'].touched &&
+                    !searchForm.controls['destination'].dirty">
+            <label class="requiredValidator">Desired destination is required!</label>
+        </div>
+        <div *ngIf="searchForm.controls.destination.hasError('minlength')">
+            <label class="wrongFormatValidator">Type in minimun 3 characters!</label>
+        </div>
+        <div>
+            <label class="inputLabels">Departure</label>
+            <input type="text" formControlName="departure" 
+                required placeholder="Copenhagen">
+        </div>
+        <div *ngIf="searchForm.controls.departure.hasError('departureErrorWithNumbers')">
+            <label class="wrongFormatValidator">Do not type numbers!</label>
+        </div>
+        <div *ngIf="!searchForm.controls['departure'].valid && 
+                    searchForm.controls['departure'].touched &&
+                    !searchForm.controls['departure'].dirty">
+            <label class="requiredValidator">Desired departure is required!</label>
+        </div>
+        <div *ngIf="searchForm.controls.departure.hasError('minlength')">
+            <label class="wrongFormatValidator">Type in minimun 3 characters!</label>
+        </div>
+        <div>
+            <label class="inputLabels">Date of departure</label>
+            <input type="date" formControlName="dateOfDepature">
+            <div *ngIf="!searchForm.controls['dateOfDepature'].valid && searchForm.controls['dateOfDepature'].touched">
+                <label class="requiredValidator">Desired date is required!</label>
+            </div>
         </div>
         
-    </div>
-    
-    <!--Time-->
-    <div>
-        <label class="inputLabels"> Departure time:</label>
-        <input type="time" formControlName="departureTime">
-        <div *ngIf="!searchForm.controls['departureTime'].valid && searchForm.controls['departureTime'].touched">
-            <label class="requiredValidator">Desired time is required</label>
+        <!--Time-->
+        <div>
+            <label class="inputLabels"> Departure time</label>
+            <input type="time" formControlName="departureTime">
+            <div *ngIf="!searchForm.controls['departureTime'].valid && searchForm.controls['departureTime'].touched">
+                <label class="requiredValidator">Desired time is required!</label>
+            </div>
         </div>
-    </div>
 
-    <!-- Return Calendar-->
-    <div *ngIf="searchForm.value.oneWayOrReturn == 'false'">
-        <label class="inputLabels">Date of return:</label>
-        <input type="date" formControlName="dateOfReturn">
-    </div>
-
-    <div *ngIf="searchForm.value.oneWayOrReturn == 'false'">
-        <label class="inputLabels">Return time:</label>
-        <input type="time" formControlName="returnTime">
-        <!-- 
-        <div *ngIf="!searchForm.controls['returnTime'].valid && searchForm.controls['returnTime'].touched">
-            <label class="requiredValidator">Desired time is required</label>
+        <!-- Return Calendar-->
+        <div *ngIf="searchForm.value.oneWayOrReturn == 'false'">
+            <label class="inputLabels">Date of return</label>
+            <input type="date" formControlName="dateOfReturn">
         </div>
-        -->
-    </div>
-    
-    <!--Number of passengers -->
-    <div>
-        <label class="inputLabels">Number of passengers:</label>
-        <input type="number" name="numberOfPassengers" placeholder="Number of passengers" min="1" formControlName="numberOfPassengers">
 
-        <div *ngIf="!searchForm.controls['numberOfPassengers'].valid && searchForm.controls['numberOfPassengers'].touched">
-        <label class="requiredValidator">Number of passengers is required</label>
+        <div *ngIf="searchForm.value.oneWayOrReturn == 'false'">
+            <label class="inputLabels">Return time</label>
+            <input type="time" formControlName="returnTime">
         </div>
-    </div>
+        
+        <!--Number of passengers -->
+        <div>
+            <label class="inputLabels">Number of passengers</label>
+            <input type="number" name="numberOfPassengers" placeholder="2" min="1" formControlName="numberOfPassengers">
+            <div *ngIf="!searchForm.controls['numberOfPassengers'].valid && searchForm.controls['numberOfPassengers'].touched">
+                <label class="requiredValidator">Number of passengers is required!</label>
+            </div>
+        </div>
 
-    <div class="radioButtons">
-        <input type="radio" checked="checked" ng-model="radio" formControlName="oneWayOrReturn" 
-        value="true" id="oneWayRadio"> One Way
-        <!-- <br/> -->
-        <input type="radio" ng-model="radio" formControlName="oneWayOrReturn" 
-        value="false" id="returnRadio"> Return
-    </div>
-
-    <input type="submit" value="Search">
-</form>
+        <div class="radioButtons">
+            <input type="radio" checked="checked" ng-model="radio" formControlName="oneWayOrReturn" 
+            value="true" id="oneWayRadio"> One Way
+            <input type="radio" ng-model="radio" formControlName="oneWayOrReturn" 
+            value="false" id="returnRadio"> Return
+        </div>
+        <input type="submit" value="Search">
+    </form>
 </div>
-
-<!--
-<body>
-    <div class="container">
-        
-        <form>
-            <p>
-                <label>Enter Destination:</label>
-                <input type="text" name="destination" required placeholder="Destination">
-            </p>
-
-            <p>
-                <label>Enter Departure:</label>
-                <input type="text" name="departure" required placeholder="Departure">
-            </p>
-
-            <p>
-                <label>Select Date of Departure:</label>
-                <input type="date" name="date">
-            </p>
-
-            <p>
-                <label>Time:</label>
-                <input type="time" name="" value="">
-            </p>
-
-            <p>
-                <input type="radio" name="test1" value="One Way">
-                One Way
-                <!--<br/>-->
-                <!--
-                <input type="radio" name="test1" value="Return">
-                Return
-            </p>
-
-            <input type="button" name="submit" value="Search Flight!">
-        </form>
-    </div>
-</body>
--->

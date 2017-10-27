@@ -11,33 +11,35 @@ body {
   color: whitesmoke; }
 
 .container {
-  width: 400px;
+  width: 550px;
   margin: 0 auto;
-  margin-top: 50px;
-  background-color: rgba(0, 0, 0, 0.3);
+  margin-top: 100px;
+  background-color: rgba(0, 0, 0, 0.5);
   padding: 20px;
   border-radius: 5px; }
+
+form {
+  color: #fff; }
+  form div {
+    padding: 10px; }
+
+h1 {
+  font-family: "Helvetica";
+  font-size: 24px;
+  font-weight: 600;
+  color: #eaf2ff;
+  text-align: center;
+  font-size: 30px; }
+
+label {
+  display: block;
+  margin-bottom: 5px; }
 
 .radioButtons {
   padding: 7px; }
 
 .inputLabels {
   padding: 5px; }
-
-h1 {
-  font-family: "Helvetica";
-  font-size: 24px;
-  font-weight: 600; }
-
-/*form p{
-    color: $inputTextColor;
-}*/
-form div {
-  color: #222; }
-
-label {
-  display: block;
-  margin-bottom: 5px; }
 
 input:not([type=radio]):not([type=submit]):not([type=button]) {
   color: #000;
@@ -53,7 +55,7 @@ input[type=submit] {
   padding: 8px;
   font: inherit;
   background-color: cornflowerblue;
-  color: #222;
+  color: #fff;
   cursor: pointer;
   border-radius: 5px;
   border: 0; }

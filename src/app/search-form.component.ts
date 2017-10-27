@@ -3,8 +3,6 @@ import { Component, OnInit } from '@angular/core';
 import { FormGroup, ReactiveFormsModule, FormBuilder, Validators,
   FormControl } from '@angular/forms';
 
-
-
 @Component({
   selector: 'search-form',
   styleUrls: ['./scss/search-form.scss'],
@@ -40,7 +38,6 @@ export class SearchFormComponent implements OnInit {
     //console.log(searchForm);
     console.log(searchForm.value.oneWayOrReturn);
   }
-
     ngOnInit(){}
 }
 

@@ -14,13 +14,32 @@ body{
 }
 
 .container{
-    width: 400px;
+    width: 550px;
     margin: 0 auto;
-    margin-top: 50px;
+    margin-top: 100px;
     
     background-color: $boxTransparent;
     padding: 20px;
     border-radius: 5px;
+}
+
+form {
+    color: $inputTextColor;
+    div {
+        padding: 10px;
+    }
+}
+
+h1{
+    @include fontStack($family: 'Helvetica', $size: 24px);
+    color: $headerColor;
+    text-align: center;
+    font-size: 30px;
+}
+
+label{
+    display: block;
+    margin-bottom: 5px;
 }
 
 .radioButtons{
@@ -29,23 +48,6 @@ body{
 
 .inputLabels{
     padding: 5px;
-}
-
-h1{
-    @include fontStack($family: 'Helvetica', $size: 24px);
-}
-
-/*form p{
-    color: $inputTextColor;
-}*/
-
-form div{
-    color: $inputTextColor;
-}
-
-label{
-    display: block;
-    margin-bottom: 5px;
 }
 
 input:not([type=radio]):not([type=submit]):not([type=button]){
